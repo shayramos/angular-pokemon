@@ -1,0 +1,15 @@
+
+<ng-container *ngIf="pokemonList?.length else noPokemon">
+    <div class="row column">
+        <ng-container *ngFor="let pokemon of pokemonList">
+            <app-pokemon-card class="custom-card p-0 mb-card"
+                [card]="pokemon"></app-pokemon-card>
+        </ng-container>
+    </div>
+</ng-container>
+
+<ng-template #noPokemon>
+    <p class="font-no-pokemon">There are no pokemon card in this list.</p>
+</ng-template>
+
+<ngx-spinner size="medium" [type]="'ball-scale-multiple'"></ngx-spinner>

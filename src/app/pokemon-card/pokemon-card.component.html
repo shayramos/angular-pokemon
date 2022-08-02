@@ -1,0 +1,18 @@
+<ng-container *ngIf="card">
+    <div class="card cursor-pointer" [routerLink]="['/pokemonDetail', card.id]">
+        <div class="card-image">
+            <img [src]="card.images.small" alt="{{card.name}}">
+        </div>
+        <div class="pt-3 pokemon-name">
+            <span>
+                {{card.name}} <br>
+            </span>
+        </div>
+        <div class="p-1 pokemon-info">
+            <span>
+                Id: {{card.id}} <br>
+                Type: {{card.types}}
+            </span>
+        </div>
+    </div>
+</ng-container>

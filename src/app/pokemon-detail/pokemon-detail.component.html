@@ -1,0 +1,33 @@
+<ng-container *ngIf="pokemonDetail">
+    <div class="column row p-4">
+        <div class="mx-auto card-image col-12 col-sm-12 col-lg-5 col-xl-6 pb-4">
+            <img [src]="pokemonDetail.images?.large" alt="{{pokemonDetail.name}}">
+        </div>
+        <div class="mx-auto card col-12 col-sm-12 col-lg-5 col-xl-6 p-4">
+            <div class="p-3 pokemon-name">
+                <label>
+                    {{pokemonDetail.name}} <br>
+                </label>
+            </div>
+            <div class="p-1 pokemon-info">
+                <label class="mb-2">Id: {{pokemonDetail.id}} <br></label>
+                <label class="mb-2">Type: {{pokemonDetail.types}} <br></label>
+                <label class="mb-2">Attacks: <br>
+                    <div class="ml-20" *ngFor="let attacks of pokemonDetail.attacks; let i=index">
+                        <label class="mb-1">Name: {{attacks.name}}</label> <br>
+                        <label class="mb-1">Mana Cost: {{attacks.convertedEnergyCost}}</label> <br>
+                        <label class="mb-1">Damage: {{attacks.damage}}</label> <br>
+                        <label class="mb-1">Description: {{attacks.text}}</label> <br> 
+                        <label *ngIf="i < pokemonDetail.attacks.length-1"><br></label>
+                    </div>
+                </label>
+                <label class="mb-2">Weaknesses: <br>
+                    <div class="ml-20" *ngFor="let weaknesses of pokemonDetail.weaknesses">
+                        <label class="mb-1">Type: {{weaknesses.type}}</label> <br>
+                        <label class="mb-1">Value: {{weaknesses.value}}</label> <br> <br>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</ng-container>

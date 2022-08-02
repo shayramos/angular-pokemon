@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.43;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.container {
+  padding: 0 27px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  background-color: #455a64;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 75px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #455a64;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  min-width: 140px;
+  color: #fff;
+  background-color: #f50057;
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
