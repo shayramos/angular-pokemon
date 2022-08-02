@@ -2,14 +2,13 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 body {
+  margin: auto !important;
   color: rgba(0, 0, 0, 0.87);
-  margin: 0;
   font-size: 0.875rem;
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.43;
-  max-width: 1280px;
-  margin: auto;
+  max-width: auto;
 }
 
 .container {
@@ -20,7 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 64px;
+  min-height: 80px;
   background-color: #455a64;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
@@ -53,4 +52,18 @@ body {
   line-height: 1.75;
   border-radius: 4px;
   text-transform: uppercase;
+}
+.custom-title {
+  padding: 20px;
+  font-size: 35px;
+  color: aqua;
+  font-weight: 500;
+  font-family: monospace;
+}
+.custom-title-aline {
+  padding: 10px;
+  font-size: 20px;
+  color: gray;
+  font-weight: 400;
+  font-family: monospace;  
 }

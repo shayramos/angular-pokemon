@@ -4,9 +4,9 @@ import { DataService } from '../core/services/data.service';
 import { ICard, ICardData } from '../shared/card';
 import { tap } from 'rxjs/operators';
 import { NgxSpinnerService } from 'ngx-spinner';
-// import { AutoUnsubscribe } from 'ngx-auto-unsubscribe-decorator';
+import { AutoUnsubscribe } from 'ngx-auto-unsubscribe-decorator';
 
-// @AutoUnsubscribe()
+@AutoUnsubscribe()
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
@@ -22,8 +22,12 @@ export class PokemonListComponent implements OnInit, OnDestroy {
     private readonly spinnerService: NgxSpinnerService) {}
 
   ngOnInit(): void {
+    this.getCards();
+  }
+
+  getCards(): void {
     this.spinnerService.show();
-    this.eventSub = this.dataService.getCards(25, 'id,name,images,types')
+    this.eventSub = this.dataService.getCardsByName('name:moltres', 50, 'id,name,images,types')
     .pipe(
       tap((response: ICard) => {
         this.pokemonList = response.data as ICardData[];

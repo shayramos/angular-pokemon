@@ -9,6 +9,10 @@ export class DataService {
   private baseUrl = 'https://api.pokemontcg.io/';
   constructor(private http: HttpClient) { }
 
+  public getCardsByName(name: string, pageSize: number, select: string) {
+    return this.http.get<ICard>(`${this.baseUrl}v2/cards?q=${name}&pageSize=${pageSize}&select=${select}&orderBy=name`)
+  }
+
   public getCards(pageSize: number, select: string) {
     return this.http.get<ICard>(`${this.baseUrl}v2/cards?pageSize=${pageSize}&select=${select}&orderBy=name`)
   }
