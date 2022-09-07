@@ -1,1 +1,1 @@
-# angular-pokemon-spread
+# angular-pokemon
